@@ -45,39 +45,61 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <a class="navbar-brand" href="#">roskus (local)</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    	<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+    		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  		</li>
+  		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web Develop</a>
+        	<div class="dropdown-menu" aria-labelledby="dropdown01">
+				<a class="dropdown-item" href="https://github.com/" target="_blank">GitHub</a>
+				<a class="dropdown-item" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+				<a class="dropdown-item" href="https://www.php.net/" target="_blank">php.net</a>
+				<a class="dropdown-item" href="https://laravel.com/" target="_blank">Laravel</a>
+				<a class="dropdown-item" href="https://developers.google.com/web" target="_blank">Google Web Developers</a>
+				<a class="dropdown-item" href="https://caniuse.com/" target="_blank">Can I use</a>
+        	</div>
+      	</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mobile Develop</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown02">
+				<a class="dropdown-item" href="https://amp.dev/" target="_blank">Amp</a>
+				<a class="dropdown-item" href="https://developers.google.com/gmail/ampemail?hl=en" target="_blank">Amp email</a>
+				<a class="dropdown-item" href="http://mobilehtml5.org/">Mobile HTML</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SEO / Analytics</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown03">
+				<a class="dropdown-item" href="" target="_blank">Google Analytics</a>
+				<a class="dropdown-item" href="https://www.google.es/webmasters">Google Webmasters</a>
+				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/">Bing Webmasters</a>
+				<a class="dropdown-item" href="https://schema.org/docs/schemas.html" target="_blank">schema.org</a>
+				<a class="dropdown-item" href="https://yslow.es/" target="_blank">Yslow</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utils</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown04">
+				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh</a>
+				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw</a>
+			</div>
+		</li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-  </div>
+</div>
 </nav>
 
 <main role="main">
