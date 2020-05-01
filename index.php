@@ -15,19 +15,22 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
 
     <!-- Bootstrap core CSS -->
-		<link href="/asset/vendor/bootstrap/4.4//css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="/asset/vendor/bootstrap/4.4//css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Favicons -->
-		<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-		<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-		<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-		<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-		<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-		<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-		<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#563d7c">
+	<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#563d7c">
 
     <style>
+	  .dropdown-item:hover {
+		background: #ddd;
+	  }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -43,8 +46,6 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -74,15 +75,15 @@
 			<div class="dropdown-menu" aria-labelledby="dropdown02">
 				<a class="dropdown-item" href="https://amp.dev/" target="_blank">Amp</a>
 				<a class="dropdown-item" href="https://developers.google.com/gmail/ampemail?hl=en" target="_blank">Amp email</a>
-				<a class="dropdown-item" href="http://mobilehtml5.org/">Mobile HTML</a>
+				<a class="dropdown-item" href="http://mobilehtml5.org/" target="_blank">Mobile HTML</a>
 			</div>
 		</li>
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SEO / Analytics</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown03">
 				<a class="dropdown-item" href="" target="_blank">Google Analytics</a>
-				<a class="dropdown-item" href="https://www.google.es/webmasters">Google Webmasters</a>
-				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/">Bing Webmasters</a>
+				<a class="dropdown-item" href="https://www.google.es/webmasters" target="_blank">Google Webmasters</a>
+				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/" target="_blank">Bing Webmasters</a>
 				<a class="dropdown-item" href="https://schema.org/docs/schemas.html" target="_blank">schema.org</a>
 				<a class="dropdown-item" href="https://yslow.es/" target="_blank">Yslow</a>
 			</div>
@@ -92,6 +93,22 @@
 			<div class="dropdown-menu" aria-labelledby="dropdown04">
 				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh</a>
 				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Design</a>
+			<div class="dropdown-menu" aria-labelledby="dropdown05">
+				<a class="dropdown-item" href="https://fonts.google.com/" target="_blank"><strong>Google</strong> fonts</a>
+				<a class="dropdown-item" href="https://fonts.adobe.com/fonts" target="_blank"><strong>Adobe</strong> fonts</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="https://material.io/resources/icons/?style=baseline" target="_blank">Material icons</a>
+				<a class="dropdown-item" href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Color</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="https://pixabay.com/es/"  target="_blank">Pixabay (Free images)</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="https://startbootstrap.com/themes/" target="_blank">Start Bootrap Themes</a>
 			</div>
 		</li>
     </ul>
@@ -117,9 +134,9 @@
 					echo $datetime->format('H:i');
 			?> en Buenos Aires
 			</p>
-      <picture>
-					<img src="<?php echo get_dilbert_comic();?>" alt="">
-			</picture>
+      	<picture>
+			<img src="<?php echo get_dilbert_comic();?>" alt="Dilbert Comic">
+		</picture>
     </div>
   </div>
 
@@ -128,20 +145,22 @@
     <div class="row">
       <div class="col-md-4">
         <h2>Server information</h2>
-        <p><i>PHP version: <?php echo phpversion(); ?></i></p>
-				<p><a href="/info.php" target="_blank"><img src="/asset/img/php.png" alt="php" width="20"> PHP info</a></p>
-				<p><a href="/pma" target="_blank"><img src="/asset/img/pma.png" alt="pma" width="20"> phpMyAdmin</a>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p>
+			<i>PHP version: <?php echo phpversion(); ?></i>
+		</p>
+		<p><a href="/info.php" target="_blank"><img src="/asset/img/php.png" alt="php" width="20"> PHP info</a></p>
+		<p><a href="/pma" target="_blank"><img src="/asset/img/pma.png" alt="pma" width="20"> phpMyAdmin</a></p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
         <h2>Heading</h2>
         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
         <h2>Heading</h2>
         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
     </div>
 
