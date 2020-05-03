@@ -1,7 +1,8 @@
 <?php
-		$name = 'Tavo';
-		$today = new DateTime;
-		require_once('lib'.DIRECTORY_SEPARATOR.'dilbert.php');
+	$today = new DateTime;
+	require_once('app'.DIRECTORY_SEPARATOR.'config.php');
+	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'dilbert.php');
+	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'openweathermap.php');
 ?>
 <!doctype html>
 <html lang="es">
@@ -91,8 +92,9 @@
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utils</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown04">
-				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh</a>
-				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw</a>
+				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh (Compress images)</a>
+				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw (Sketching / Diagrams)</a>
+				<a class="dropdown-item" href="https://carbon.now.sh" target="_blank">Carbon App (Share code)</a>
 			</div>
 		</li>
 		<li class="nav-item dropdown">
@@ -107,6 +109,7 @@
 				<a class="dropdown-item" href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Color</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="https://pixabay.com/es/"  target="_blank">Pixabay (Free images)</a>
+				<a class="dropdown-item" href="https://undraw.co/illustrations"  target="_blank">Undraw (Free illustrations)</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="https://startbootstrap.com/themes/" target="_blank">Start Bootrap Themes</a>
 			</div>
@@ -124,9 +127,26 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Hola, <?php echo $name;?>!</h1>
-      <p><i>Hoy es:</i> <strong><?php echo $today->format('l d F Y');?></strong></p>
-			<p>Son las
+		<div class="row">
+			<div class="col">
+				<h1 class="display-3">Hola, <?php echo $name;?>!</h1>
+			</div>
+			<div class="col text-right">
+				<?php
+				$weather = get_current_weather($OPEN_WEATHER_API_CALL_URL);
+				?>
+				<?php if(!empty($weather)):?>
+					<span class="">
+						<?php echo $weather->main->temp;?> ºC
+						<img src="https://openweathermap.org/img/wn/<?php echo $weather->weather[0]->icon;?>@2x.png" width="32" alt="<?php echo $weather->weather[0]->description;?>">
+					</span> |
+					<span class=""><?php echo $weather->main->temp_min;?> / <?php echo $weather->main->temp_max;?></span>
+				<?php endif;?>
+			</div>
+		</div>
+
+      	<p><i>Hoy es:</i> <strong><?php echo $today->format('l d F Y');?></strong></p>
+		<p>Son las
 			<?php
 					$ba_time = new DateTimeZone('America/Buenos_Aires');
 					$datetime = new DateTime();
