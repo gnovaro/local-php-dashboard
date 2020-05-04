@@ -95,6 +95,7 @@
 				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh (Compress images)</a>
 				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw (Sketching / Diagrams)</a>
 				<a class="dropdown-item" href="https://carbon.now.sh" target="_blank">Carbon App (Share code)</a>
+				<a class="dropdown-item" href="https://maildrop.cc" target="_blank">Maildrop (Disposable Mail)</a>				
 			</div>
 		</li>
 		<li class="nav-item dropdown">
