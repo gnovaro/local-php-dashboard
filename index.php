@@ -95,6 +95,7 @@
 				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh (Compress images)</a>
 				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw (Sketching / Diagrams)</a>
 				<a class="dropdown-item" href="https://carbon.now.sh" target="_blank">Carbon App (Share code)</a>
+				<a class="dropdown-item" href="https://convertio.co/es/" target="_blank">Convertio (File conversor)</a>
 			</div>
 		</li>
 		<li class="nav-item dropdown">
@@ -178,9 +179,15 @@
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
+        <h2>TO DO List</h2>
+        <form method="post" action="/" class="form-inline">
+			<div class="input-group">
+				<input type="text" name="task" placeholder="Tarea" required class="form-control">
+				<div class="input-group-append">
+					<button type="submit" class="btn btn-outline-primary btn-xs">+</button>
+				</div>
+			</div>
+		</form>
       </div>
     </div>
 
