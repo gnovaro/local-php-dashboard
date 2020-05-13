@@ -3,6 +3,17 @@
 	require_once('app'.DIRECTORY_SEPARATOR.'config.php');
 	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'dilbert.php');
 	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'openweathermap.php');
+	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'ToDo.php');
+	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'feed.php');
+
+	$todo = new ToDo();
+	try {
+		$tasks = $todo->getAllPendingTasks();
+	} catch(\Throwable $t) {
+  		// PHP 7
+		var_dump($t);
+	}
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -86,6 +97,7 @@
 				<a class="dropdown-item" href="https://www.google.es/webmasters" target="_blank">Google Webmasters</a>
 				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/" target="_blank">Bing Webmasters</a>
 				<a class="dropdown-item" href="https://schema.org/docs/schemas.html" target="_blank">schema.org</a>
+				<a class="dropdown-item" href="https://moz.com/" target="_blank">MOZ</a>
 				<a class="dropdown-item" href="https://yslow.es/" target="_blank">Yslow</a>
 			</div>
 		</li>
@@ -131,14 +143,14 @@
     <div class="container">
 		<div class="row">
 			<div class="col">
-				<h1 class="display-3">Hola, <?php echo $name;?>!</h1>
+				<h1 class="display-4">Hola, <?php echo $name;?>!</h1>
 			</div>
 			<div class="col text-right">
 				<?php
 				$weather = get_current_weather($OPEN_WEATHER_API_CALL_URL);
 				?>
 				<?php if(!empty($weather)):?>
-					<span class="">
+					<span class="" data-toggle="tooltip" data-placement="bottom" title="<?php echo $weather->weather[0]->description;?>">
 						<?php echo $weather->main->temp;?> ºC
 						<img src="https://openweathermap.org/img/wn/<?php echo $weather->weather[0]->icon;?>@2x.png" width="32" alt="<?php echo $weather->weather[0]->description;?>">
 					</span> |
@@ -175,8 +187,28 @@
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <h2>News</h2>
+		<?php
+		$feeds = get_rss_feed($RSS_URL,$RSS2JSON_API_KEY);
+		if($feeds):
+			if($feeds['status'] == 'ok'):
+				$f = 0;
+		        foreach ($feeds['items'] as $item):
+		?>
+        <p>
+			<a href="<?php echo $item['link'];?>" target="_blank"><?php echo $item['title'];?></a>
+		</p>
+		<?php
+					if($f < $RSS_FEED_LIMIT) {
+						$f++;
+					} else {
+						break;
+					}
+				endforeach;
+
+			endif;
+		endif;
+		?>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
@@ -189,6 +221,39 @@
 				</div>
 			</div>
 		</form>
+
+		<table class="table table-bordered table-striped table-sm mt-2">
+		<thead>
+		<tr>
+			<th width="90%">Task</th>
+			<th>Done</th>
+		</tr>
+		</thead>
+		<tbody>
+			<?php
+			if(!empty($tasks)):
+				foreach ($tasks as $task):
+			?>
+			<tr>
+				<td>
+					<?php echo $task->description;?>
+				</td>
+				<td>
+					<input type="checkbox" value="<?php echo $task->id;?>">
+				</td>
+			</tr>
+			<?php
+				endforeach;
+			else:
+			?>
+			<tr>
+				<td colspan="2">No pending tasks.</td>
+			</tr>
+			<?php
+			endif;
+			?>
+		</tbody>
+		</table>
       </div>
     </div>
 
