@@ -120,6 +120,7 @@
 				<a class="dropdown-item" href="https://material.io/resources/icons/?style=baseline" target="_blank">Material icons</a>
 				<a class="dropdown-item" href="https://fontawesome.com/" target="_blank">Font Awesome</a>
 				<a class="dropdown-item" href="https://linearicons.com/" target="_blank">Linearicons</a>
+				<a class="dropdown-item" href="https://icons8.com/line-awesome" target="_blank">Line Awesome</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Color</a>
 				<div class="dropdown-divider"></div>
