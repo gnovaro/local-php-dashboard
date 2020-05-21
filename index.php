@@ -93,7 +93,7 @@
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SEO / Analytics</a>
 			<div class="dropdown-menu" aria-labelledby="dropdown03">
-				<a class="dropdown-item" href="" target="_blank">Google Analytics</a>
+				<a class="dropdown-item" href="https://analytics.google.com" target="_blank">Google Analytics</a>
 				<a class="dropdown-item" href="https://www.google.es/webmasters" target="_blank">Google Webmasters</a>
 				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/" target="_blank">Bing Webmasters</a>
 				<a class="dropdown-item" href="https://schema.org/docs/schemas.html" target="_blank">schema.org</a>
@@ -119,6 +119,7 @@
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="https://material.io/resources/icons/?style=baseline" target="_blank">Material icons</a>
 				<a class="dropdown-item" href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+				<a class="dropdown-item" href="https://linearicons.com/" target="_blank">Linearicons</a>
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Color</a>
 				<div class="dropdown-divider"></div>
