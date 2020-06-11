@@ -6,6 +6,8 @@
 	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'ToDo.php');
 	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'feed.php');
 
+	$menus = require_once('app'.DIRECTORY_SEPARATOR.'menu_links.php');
+
 	$todo = new ToDo();
 	try {
 		$tasks = $todo->getAllPendingTasks();
@@ -71,65 +73,37 @@
 		<li class="nav-item active">
     		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
   		</li>
-  		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web Develop</a>
-        	<div class="dropdown-menu" aria-labelledby="dropdown01">
-				<a class="dropdown-item" href="https://github.com/" target="_blank">GitHub</a>
-				<a class="dropdown-item" href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
-				<a class="dropdown-item" href="https://www.php.net/" target="_blank">php.net</a>
-				<a class="dropdown-item" href="https://laravel.com/" target="_blank">Laravel</a>
-				<a class="dropdown-item" href="https://developers.google.com/web" target="_blank">Google Web Developers</a>
-				<a class="dropdown-item" href="https://caniuse.com/" target="_blank">Can I use</a>
-        	</div>
-      	</li>
+		<?php
+		if(!empty($menus))
+		foreach($menus as $menu):
+		?>
 		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mobile Develop</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown02">
-				<a class="dropdown-item" href="https://amp.dev/" target="_blank">Amp</a>
-				<a class="dropdown-item" href="https://developers.google.com/gmail/ampemail?hl=en" target="_blank">Amp email</a>
-				<a class="dropdown-item" href="http://mobilehtml5.org/" target="_blank">Mobile HTML</a>
-			</div>
-		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SEO / Analytics</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown03">
-				<a class="dropdown-item" href="https://analytics.google.com" target="_blank">Google Analytics</a>
-				<a class="dropdown-item" href="https://www.google.es/webmasters" target="_blank">Google Webmasters</a>
-				<a class="dropdown-item" href="https://www.bing.com/toolbox/webmaster/" target="_blank">Bing Webmasters</a>
-				<a class="dropdown-item" href="https://schema.org/docs/schemas.html" target="_blank">schema.org</a>
-				<a class="dropdown-item" href="https://moz.com/" target="_blank">MOZ</a>
-				<a class="dropdown-item" href="https://yslow.es/" target="_blank">Yslow</a>
-			</div>
-		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Utils</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown04">
-				<a class="dropdown-item" href="https://squoosh.app/" target="_blank">squoosh (Compress images)</a>
-				<a class="dropdown-item" href="https://excalidraw.com/" target="_blank">excalidraw (Sketching / Diagrams)</a>
-				<a class="dropdown-item" href="https://carbon.now.sh" target="_blank">Carbon App (Share code)</a>
-				<a class="dropdown-item" href="https://convertio.co/es/" target="_blank">Convertio (File conversor)</a>
-				<a class="dropdown-item" href="https://maildrop.cc" target="_blank">Maildrop (Disposable Mail)</a>
-			</div>
-		</li>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Design</a>
-			<div class="dropdown-menu" aria-labelledby="dropdown05">
-				<a class="dropdown-item" href="https://fonts.google.com/" target="_blank"><strong>Google</strong> fonts</a>
-				<a class="dropdown-item" href="https://fonts.adobe.com/fonts" target="_blank"><strong>Adobe</strong> fonts</a>
+			<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $menu['name'];?></a>
+			<?php
+			if(!empty($menu['links'])):
+			?>
+			<div class="dropdown-menu" aria-labelledby="dropdown01">
+			<?php
+			foreach($menu['links'] as $link):
+				if(!empty($link['url'])):
+			?>
+				<a class="dropdown-item" href="<?php echo $link['url'];?>" target="_blank"><?php echo $link['name'];?></a>
+			<?php
+				else:
+			?>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="https://material.io/resources/icons/?style=baseline" target="_blank">Material icons</a>
-				<a class="dropdown-item" href="https://fontawesome.com/" target="_blank">Font Awesome</a>
-				<a class="dropdown-item" href="https://linearicons.com/" target="_blank">Linearicons</a>
-				<a class="dropdown-item" href="https://icons8.com/line-awesome" target="_blank">Line Awesome</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="https://material.io/resources/color/#!/?view.left=0&view.right=0" target="_blank">Material Color</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="https://pixabay.com/es/"  target="_blank">Pixabay (Free images)</a>
-				<a class="dropdown-item" href="https://undraw.co/illustrations"  target="_blank">Undraw (Free illustrations)</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="https://startbootstrap.com/themes/" target="_blank">Start Bootrap Themes</a>
+			<?php
+				endif;
+			endforeach;
+			?>
 			</div>
+			<?php
+			endif;
+			?>
 		</li>
+		<?php
+		endforeach;
+		?>
     </ul>
     <form class="form-inline my-2 my-lg-0">
     	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
