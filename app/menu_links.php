@@ -27,11 +27,16 @@ return [
         'name' => 'SEO / Analytics',
         'links' => [
             ['name' => 'Google Analytics', 'url' => 'https://analytics.google.com'],
+            ['name' => 'Campaign URL Builder', 'url' => 'https://ga-dev-tools.appspot.com/campaign-url-builder/'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'Google Webmasters', 'url' => 'https://www.google.es/webmasters'],
             ['name' => 'Bing Webmasters', 'url' => 'https://www.bing.com/toolbox/webmaster/'],
-            ['name' => 'schema.org', 'url' => 'https://schema.org/docs/schemas.html'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'MOZ', 'url' => 'https://moz.com/'],
             ['name' => 'Yslow', 'url' => 'https://yslow.es/'],
+                ['name' => '', 'url' => ''],//Divider
+            ['name' => 'schema.org', 'url' => 'https://schema.org/docs/schemas.html'],
+            ['name' => 'sitemap.org', 'url' => 'https://www.sitemaps.org/es/protocol.html'],
         ]
     ],
     'utils' =>
