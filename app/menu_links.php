@@ -70,10 +70,19 @@ return [
             ['name' => 'Undraw (Free illustrations)', 'url' => 'https://undraw.co/illustrations'],
             ['name' => 'manypixels (Free illustrations)', 'url' => 'https://www.manypixels.co/gallery/'],
             ['name' => 'Open Peeps (Free illustrations)', 'url' => 'https://www.openpeeps.com/'],
+            ['name' => 'Illustrations (Free illustrations)', 'url' => 'https://illlustrations.co/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Start Bootrap Themes', 'url' => 'https://startbootstrap.com/themes/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Figma', 'url' => 'https://www.figma.com/'],
+        ]
+    ],
+    'devops' =>
+    [
+        'name' => 'Devops',
+        'links' => [
+            ['name' => 'Cloudflare', 'url' => 'https://www.cloudflare.com/'],
+            ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/']
         ]
     ]
 ];

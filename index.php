@@ -40,26 +40,7 @@
 	<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
 	<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#563d7c">
-
-    <style>
-	  .dropdown-item:hover {
-		background: #ddd;
-	  }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+	<link rel="stylesheet" href="/asset/css/dashboard.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -105,10 +86,18 @@
 		endforeach;
 		?>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-    	<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-    	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+   <div class="text-white">
+   		<?php
+		$weather = get_current_weather($OPEN_WEATHER_API_CALL_URL);
+		?>
+		<?php if(!empty($weather)):?>
+			<span class="" data-toggle="tooltip" data-placement="bottom" title="<?php echo $weather->weather[0]->description;?>">
+				<?php echo $weather->main->temp;?> ºC
+				<img src="https://openweathermap.org/img/wn/<?php echo $weather->weather[0]->icon;?>@2x.png" width="32" alt="<?php echo $weather->weather[0]->description;?>">
+			</span> |
+			<span class=""><?php echo $weather->main->temp_min;?> / <?php echo $weather->main->temp_max;?></span>
+		<?php endif;?>
+   </div>
 </div>
 </nav>
 
@@ -120,18 +109,6 @@
 		<div class="row">
 			<div class="col">
 				<h1 class="display-4">Hola, <?php echo $name;?>!</h1>
-			</div>
-			<div class="col text-right">
-				<?php
-				$weather = get_current_weather($OPEN_WEATHER_API_CALL_URL);
-				?>
-				<?php if(!empty($weather)):?>
-					<span class="" data-toggle="tooltip" data-placement="bottom" title="<?php echo $weather->weather[0]->description;?>">
-						<?php echo $weather->main->temp;?> ºC
-						<img src="https://openweathermap.org/img/wn/<?php echo $weather->weather[0]->icon;?>@2x.png" width="32" alt="<?php echo $weather->weather[0]->description;?>">
-					</span> |
-					<span class=""><?php echo $weather->main->temp_min;?> / <?php echo $weather->main->temp_max;?></span>
-				<?php endif;?>
 			</div>
 		</div>
 
