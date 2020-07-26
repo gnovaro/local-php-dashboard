@@ -87,6 +87,10 @@
 		?>
     </ul>
    <div class="text-white">
+		<div>
+			<span id="clock"></span>
+			Buenos Aires
+		</div>
    		<?php
 		$weather = get_current_weather($OPEN_WEATHER_API_CALL_URL);
 		?>
@@ -94,7 +98,7 @@
 			<span class="" data-toggle="tooltip" data-placement="bottom" title="<?php echo $weather->weather[0]->description;?>">
 				<?php echo $weather->main->temp;?> ºC
 				<img src="https://openweathermap.org/img/wn/<?php echo $weather->weather[0]->icon;?>@2x.png" width="32" alt="<?php echo $weather->weather[0]->description;?>">
-			</span> |
+			</span>
 			<span class=""><?php echo $weather->main->temp_min;?> / <?php echo $weather->main->temp_max;?></span>
 		<?php endif;?>
    </div>
@@ -102,25 +106,16 @@
 </nav>
 
 <main role="main">
-
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
+  <div class="jumbotron mt-2">
     <div class="container">
 		<div class="row">
 			<div class="col">
-				<h1 class="display-4">Hola, <?php echo $name;?>!</h1>
+				<h1 class="display-4">Hola, <span class="text-primary"><?php echo $name;?></span>!</h1>
 			</div>
 		</div>
 
       	<p><i>Hoy es:</i> <strong><?php echo $today->format('l d F Y');?></strong></p>
-		<p>Son las
-			<?php
-					$ba_time = new DateTimeZone('America/Buenos_Aires');
-					$datetime = new DateTime();
-					$datetime->setTimezone($ba_time);
-					echo $datetime->format('H:i');
-			?> en Buenos Aires
-			</p>
       	<picture>
 			<img src="<?php echo get_dilbert_comic();?>" alt="Dilbert Comic">
 		</picture>
@@ -222,5 +217,18 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/asset/vendor/jquery/3.4.1/jquery.slim.min.js"><\/script>')</script>
 <script src="/asset/vendor/bootstrap/4.4/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+<script src="/asset/vendor/moment/0.5.31/builds/moment-timezone-with-data-2012-2022.min.js"></script>
+<script>
+function displayTime() {
+    var time = moment().tz("America/Argentina/Buenos_Aires").format('HH:mm:ss');
+    $('#clock').html(time);
+    setTimeout(displayTime, 1000);
+}
+
+$(document).ready(function() {
+    displayTime();
+});
+</script>
 </body>
 </html>
