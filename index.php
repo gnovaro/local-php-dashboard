@@ -117,7 +117,7 @@
 
       	<p><i>Hoy es:</i> <strong><?php echo $today->format('l d F Y');?></strong></p>
       	<picture>
-			<img src="<?php echo get_dilbert_comic();?>" alt="Dilbert Comic">
+			<img src="<?php echo get_dilbert_comic();?>" alt="Dilbert Comic" class="img-fluid">
 		</picture>
     </div>
   </div>
