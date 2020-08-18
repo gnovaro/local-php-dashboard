@@ -15,7 +15,6 @@
   		// PHP 7
 		var_dump($t);
 	}
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -26,7 +25,7 @@
     <meta name="author" content="Gustavo Novaro">
     <title>Dashoard · localhost</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/jumbotron/">
+    <link rel="canonical" href="https://localhost">
 
     <!-- Bootstrap core CSS -->
 	<link href="/asset/vendor/bootstrap/4.4//css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -161,7 +160,7 @@
       </div>
       <div class="col-md-4">
         <h2>TO DO List</h2>
-        <form method="post" action="/" class="form-inline">
+        <form method="post" action="/">
 			<div class="input-group">
 				<input type="text" name="task" placeholder="Tarea" required class="form-control">
 				<div class="input-group-append">

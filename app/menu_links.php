@@ -10,6 +10,7 @@ return [
             ['name' => 'Bootstrap', 'url' => 'https://getbootstrap.com/'],
             ['name' => 'Google Web Developers', 'url' => 'https://developers.google.com/web'],
             ['name' => 'Can I use', 'url' => 'https://caniuse.com/'],
+            ['name' => 'All The Tags', 'url' => 'https://allthetags.com/'],
         ]
     ],
     'mobile_develop' =>
@@ -82,7 +83,8 @@ return [
         'name' => 'Devops',
         'links' => [
             ['name' => 'Cloudflare', 'url' => 'https://www.cloudflare.com/'],
-            ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/']
+            ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/'],
+            ['name' => 'ngrok', 'url' => 'https://ngrok.com/']
         ]
     ]
 ];
