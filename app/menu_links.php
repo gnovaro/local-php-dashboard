@@ -66,6 +66,7 @@ return [
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Material Color', 'url' => 'https://material.io/resources/color/#!/?view.left=0&view.right=0'],
                 ['name' => '', 'url' => ''],//Divider
+            ['name' => 'Pexels (Free images)', 'url' => 'https://www.pexels.com/'],
             ['name' => 'Pixabay (Free images)', 'url' => 'https://pixabay.com/es/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Undraw (Free illustrations)', 'url' => 'https://undraw.co/illustrations'],
@@ -84,7 +85,8 @@ return [
         'links' => [
             ['name' => 'Cloudflare', 'url' => 'https://www.cloudflare.com/'],
             ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/'],
-            ['name' => 'ngrok', 'url' => 'https://ngrok.com/']
+            ['name' => 'ngrok', 'url' => 'https://ngrok.com/'],
+            ['name' => 'Let\'s Encrypt', url => 'https://letsencrypt.org/']
         ]
     ]
 ];
