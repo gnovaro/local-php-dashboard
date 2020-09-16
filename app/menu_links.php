@@ -50,6 +50,9 @@ return [
             ['name' => 'Convertio (File conversor)', 'url' => 'https://convertio.co/es/'],
             ['name' => 'Maildrop (Disposable Mail)', 'url' => 'https://maildrop.cc'],
             ['name' => 'diagrams.net', 'url' => 'https://app.diagrams.net/'],
+                ['name' => '', 'url' => ''],//Divider
+            ['name' => 'Whereby (Video Meetings)', 'url' => 'https://whereby.com'],
+            ['name' => 'Jitsi Meet(Video Meetings)', 'url' => 'https://meet.jit.si']
         ]
     ],
     'design' =>
@@ -86,7 +89,8 @@ return [
             ['name' => 'Cloudflare', 'url' => 'https://www.cloudflare.com/'],
             ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/'],
             ['name' => 'ngrok', 'url' => 'https://ngrok.com/'],
-            ['name' => 'Let\'s Encrypt', url => 'https://letsencrypt.org/']
+            ['name' => 'Let\'s Encrypt', url => 'https://letsencrypt.org/'],
+            ['name' => 'Vault', url =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data']
         ]
     ]
 ];
