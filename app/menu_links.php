@@ -50,6 +50,7 @@ return [
             ['name' => 'Convertio (File conversor)', 'url' => 'https://convertio.co/es/'],
             ['name' => 'Maildrop (Disposable Mail)', 'url' => 'https://maildrop.cc'],
             ['name' => 'diagrams.net', 'url' => 'https://app.diagrams.net/'],
+            ['name' => 'removebg', 'url' => 'https://www.remove.bg/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Whereby (Video Meetings)', 'url' => 'https://whereby.com'],
             ['name' => 'Jitsi Meet(Video Meetings)', 'url' => 'https://meet.jit.si']
@@ -66,6 +67,7 @@ return [
             ['name' => 'Font Awesome', 'url' => 'https://fontawesome.com/'],
             ['name' => 'Linearicons', 'url' => 'https://linearicons.com/'],
             ['name' => 'Line Awesome', 'url' => 'https://icons8.com/line-awesome'],
+            ['name' => 'Simple Icons', 'url' => 'https://simpleicons.org/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Material Color', 'url' => 'https://material.io/resources/color/#!/?view.left=0&view.right=0'],
                 ['name' => '', 'url' => ''],//Divider
@@ -80,6 +82,7 @@ return [
             ['name' => 'Start Bootrap Themes', 'url' => 'https://startbootstrap.com/themes/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Figma', 'url' => 'https://www.figma.com/'],
+            ['name' => 'Canva', 'url' => 'https://www.canva.com'],
         ]
     ],
     'devops' =>
@@ -89,8 +92,8 @@ return [
             ['name' => 'Cloudflare', 'url' => 'https://www.cloudflare.com/'],
             ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/'],
             ['name' => 'ngrok', 'url' => 'https://ngrok.com/'],
-            ['name' => 'Let\'s Encrypt', url => 'https://letsencrypt.org/'],
-            ['name' => 'Vault', url =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data']
+            ['name' => 'Let\'s Encrypt', 'url' => 'https://letsencrypt.org/'],
+            ['name' => 'Vault', 'url' =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data']
         ]
     ]
 ];
