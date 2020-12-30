@@ -49,7 +49,10 @@ return [
             ['name' => 'Carbon App (Share code)', 'url' => 'https://carbon.now.sh'],
             ['name' => 'Convertio (File conversor)', 'url' => 'https://convertio.co/es/'],
             ['name' => 'Maildrop (Disposable Mail)', 'url' => 'https://maildrop.cc'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'diagrams.net', 'url' => 'https://app.diagrams.net/'],
+            ['name' => 'excalidraw.com', 'url' => 'https://excalidraw.com/'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'removebg', 'url' => 'https://www.remove.bg/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Whereby (Video Meetings)', 'url' => 'https://whereby.com'],
