@@ -11,6 +11,7 @@ return [
             ['name' => 'Google Web Developers', 'url' => 'https://developers.google.com/web'],
             ['name' => 'Can I use', 'url' => 'https://caniuse.com/'],
             ['name' => 'All The Tags', 'url' => 'https://allthetags.com/'],
+            ['name' => 'Markdown Guide', 'url' => 'https://www.markdownguide.org/'],
         ]
     ],
     'mobile_develop' =>
@@ -66,6 +67,8 @@ return [
             ['name' => '<strong>Google</strong> fonts', 'url' => 'https://fonts.google.com/'],
             ['name' => '<strong>Adobe</strong> fonts', 'url' => 'https://fonts.adobe.com/fonts'],
                 ['name' => '', 'url' => ''],//Divider
+                ['name' => 'Photopea (Online Photoshop)', 'url' => 'https://www.photopea.com'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'Material icons', 'url' => 'https://material.io/resources/icons/?style=baseline'],
             ['name' => 'Font Awesome', 'url' => 'https://fontawesome.com/'],
             ['name' => 'Linearicons', 'url' => 'https://linearicons.com/'],
@@ -86,6 +89,8 @@ return [
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Figma', 'url' => 'https://www.figma.com/'],
             ['name' => 'Canva', 'url' => 'https://www.canva.com'],
+                ['name' => '', 'url' => ''],//Divider
+            ['name' => 'Emojipedia', 'url' => 'https://emojipedia.org/'],
         ]
     ],
     'devops' =>
@@ -96,7 +101,9 @@ return [
             ['name' => 'Docker Hub', 'url' => 'https://hub.docker.com/'],
             ['name' => 'ngrok', 'url' => 'https://ngrok.com/'],
             ['name' => 'Let\'s Encrypt', 'url' => 'https://letsencrypt.org/'],
-            ['name' => 'Vault', 'url' =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data']
+                ['name' => '', 'url' => ''],//Divider
+            ['name' => 'Vault', 'url' =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data'],
+            ['name' => 'Envault', 'url' =>'https://envault.dev/', 'title' => 'Tame your .env variables']
         ]
     ]
 ];
