@@ -7,7 +7,10 @@ return [
             ['name' => 'GitHub', 'url' => 'https://github.com/'],
             ['name' => 'php.net', 'url' => 'https://www.php.net/'],
             ['name' => 'Laravel', 'url' => 'https://laravel.com/'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'Bootstrap', 'url' => 'https://getbootstrap.com/'],
+            ['name' => 'tailwindcss', 'url' => 'https://tailwindcss.com/'],            
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'Google Web Developers', 'url' => 'https://developers.google.com/web'],
             ['name' => 'Can I use', 'url' => 'https://caniuse.com/'],
             ['name' => 'All The Tags', 'url' => 'https://allthetags.com/'],
@@ -59,6 +62,13 @@ return [
             ['name' => 'Whereby (Video Meetings)', 'url' => 'https://whereby.com'],
             ['name' => 'Jitsi Meet(Video Meetings)', 'url' => 'https://meet.jit.si']
         ]
+    ],
+    'data' => 
+    [
+        'name' => 'Data',
+        'links' => [
+            ['name' => 'kaggle', 'url' => 'https://www.kaggle.com/']            
+        ],
     ],
     'design' =>
     [
