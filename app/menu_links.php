@@ -117,5 +117,13 @@ return [
             ['name' => 'Vault', 'url' =>'https://www.vaultproject.io/', 'title' => 'Manage Secrets and Protect Sensitive Data'],
             ['name' => 'Envault', 'url' =>'https://envault.dev/', 'title' => 'Tame your .env variables']
         ]
+    ],
+    'social_media' => 
+    [
+        'name' => 'Social Media',
+        'links' => [
+            ['name' => 'Buffer', 'url' => 'https://buffer.com'],
+            ['name' => 'HASHTAG STACK', 'url' => 'https://hashtagstack.com'],
+        ]
     ]
 ];
