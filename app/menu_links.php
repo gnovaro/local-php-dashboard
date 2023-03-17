@@ -9,7 +9,7 @@ return [
             ['name' => 'Laravel', 'url' => 'https://laravel.com/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Bootstrap', 'url' => 'https://getbootstrap.com/'],
-            ['name' => 'tailwindcss', 'url' => 'https://tailwindcss.com/'],            
+            ['name' => 'tailwindcss', 'url' => 'https://tailwindcss.com/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Google Web Developers', 'url' => 'https://developers.google.com/web'],
             ['name' => 'Can I use', 'url' => 'https://caniuse.com/'],
@@ -63,11 +63,11 @@ return [
             ['name' => 'Jitsi Meet(Video Meetings)', 'url' => 'https://meet.jit.si']
         ]
     ],
-    'data' => 
+    'data' =>
     [
         'name' => 'Data',
         'links' => [
-            ['name' => 'kaggle', 'url' => 'https://www.kaggle.com/']            
+            ['name' => 'kaggle', 'url' => 'https://www.kaggle.com/']
         ],
     ],
     'design' =>
@@ -87,10 +87,10 @@ return [
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Material Color', 'url' => 'https://material.io/resources/color/#!/?view.left=0&view.right=0'],
                 ['name' => '', 'url' => ''],//Divider
-            ['name' => 'Pexels (Free images)', 'url' => 'https://www.pexels.com/'],            
+            ['name' => 'Pexels (Free images)', 'url' => 'https://www.pexels.com/'],
             ['name' => 'Pixabay (Free images)', 'url' => 'https://pixabay.com/es/'],
-            ['name' => 'Unsplash (Free images)', 'url' => 'https://unsplash.com/'],            
-            
+            ['name' => 'Unsplash (Free images)', 'url' => 'https://unsplash.com/'],
+
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Undraw (Free illustrations)', 'url' => 'https://undraw.co/illustrations'],
             ['name' => 'manypixels (Free illustrations)', 'url' => 'https://www.manypixels.co/gallery/'],
@@ -118,12 +118,25 @@ return [
             ['name' => 'Envault', 'url' =>'https://envault.dev/', 'title' => 'Tame your .env variables']
         ]
     ],
-    'social_media' => 
+    'social_media' =>
     [
         'name' => 'Social Media',
         'links' => [
             ['name' => 'Buffer', 'url' => 'https://buffer.com'],
             ['name' => 'HASHTAG STACK', 'url' => 'https://hashtagstack.com'],
         ]
-    ]
+    ],
+    'seo' => [
+        'name' => 'SEO',
+        'links' => [
+            ['name' => 'ahref', 'url' => 'https://ahrefs.com'],
+            ['name' => 'GTmetix', 'url' => 'https://gtmetrix.com/'],
+        ]
+    ],
+    'ia' => [
+        'name' => 'IA',
+        'links' => [
+            ['name' => 'ChatGPT', 'url' => 'https://chat.openai.com'],
+        ]
+    ],
 ];
