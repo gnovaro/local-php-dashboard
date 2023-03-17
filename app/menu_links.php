@@ -31,11 +31,15 @@ return [
     [
         'name' => 'SEO / Analytics',
         'links' => [
-            ['name' => 'Google Analytics', 'url' => 'https://analytics.google.com'],
-            ['name' => 'Campaign URL Builder', 'url' => 'https://ga-dev-tools.appspot.com/campaign-url-builder/'],
+            ['name' => 'ahref', 'url' => 'https://ahrefs.com'],
+            ['name' => 'GTmetix', 'url' => 'https://gtmetrix.com/'],
                 ['name' => '', 'url' => ''],//Divider
+
             ['name' => 'Google Webmasters', 'url' => 'https://www.google.es/webmasters'],
             ['name' => 'Bing Webmasters', 'url' => 'https://www.bing.com/toolbox/webmaster/'],
+                ['name' => '', 'url' => ''],//Divider
+            ['name' => 'Google Analytics', 'url' => 'https://analytics.google.com'],
+            ['name' => 'Campaign URL Builder', 'url' => 'https://ga-dev-tools.appspot.com/campaign-url-builder/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'MOZ', 'url' => 'https://moz.com/'],
             ['name' => 'Yslow', 'url' => 'https://yslow.es/'],
@@ -124,13 +128,6 @@ return [
         'links' => [
             ['name' => 'Buffer', 'url' => 'https://buffer.com'],
             ['name' => 'HASHTAG STACK', 'url' => 'https://hashtagstack.com'],
-        ]
-    ],
-    'seo' => [
-        'name' => 'SEO',
-        'links' => [
-            ['name' => 'ahref', 'url' => 'https://ahrefs.com'],
-            ['name' => 'GTmetix', 'url' => 'https://gtmetrix.com/'],
         ]
     ],
     'ia' => [
