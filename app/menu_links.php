@@ -33,6 +33,7 @@ return [
         'links' => [
             ['name' => 'ahref', 'url' => 'https://ahrefs.com'],
             ['name' => 'GTmetix', 'url' => 'https://gtmetrix.com/'],
+            ['name' => 'Screamingfrog', 'url' => 'https://www.screamingfrog.co.uk/'],
                 ['name' => '', 'url' => ''],//Divider
 
             ['name' => 'Google Webmasters', 'url' => 'https://www.google.es/webmasters'],
