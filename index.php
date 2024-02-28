@@ -23,6 +23,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Gustavo Novaro">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">  
     <title>Dashoard · localhost</title>
 
     <link rel="canonical" href="https://localhost">
@@ -129,8 +131,15 @@
         <p>
 			<i>PHP version: <?php echo phpversion(); ?></i>
 		</p>
-		<p><a href="/info.php" target="_blank"><img src="/asset/img/php.png" alt="php" width="20"> PHP info</a></p>
-		<p><a href="/pma" target="_blank"><img src="/asset/img/pma.png" alt="pma" width="20"> phpMyAdmin</a></p>
+		<p>
+            <a href="/info.php" target="_blank" rel="noopener nofollow">
+                <img src="/asset/img/php.png" alt="php" width="20"> PHP info
+            </a>
+        </p>
+		<p>
+            <a href="/pma" target="_blank" rel="noopener nofollow">
+                <img src="/asset/img/pma.png" alt="pma" width="20"> phpMyAdmin</a>
+        </p>
         <!--<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>-->
       </div>
       <div class="col-md-4">
