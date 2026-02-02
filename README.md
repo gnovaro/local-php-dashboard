@@ -4,7 +4,7 @@ Local PHP Dashboard is a simple PHP page for replace your boring default local p
 ![Preview](asset/img/preview.jpg?raw=true "Preview Local Dashoard")
 
 ## Features
-* Useful links for IT: Develop, SEO, Webdesign, Devops
+* Useful links for IT: Develop, SEO, Webdesign, DevOps
 * News RSS reader
 * Today Dilbert comic
 * Forecast

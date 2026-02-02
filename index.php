@@ -1,4 +1,7 @@
 <?php
+/**
+ * Local PHP Dashboard
+ */
 	$today = new DateTime;
 	require_once('app'.DIRECTORY_SEPARATOR.'config.php');
 	require_once('app'.DIRECTORY_SEPARATOR.'lib'.DIRECTORY_SEPARATOR.'dilbert.php');
@@ -24,13 +27,13 @@
     <meta name="description" content="">
     <meta name="author" content="Gustavo Novaro">
     <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">  
-    <title>Dashoard · localhost</title>
+    <meta name="googlebot" content="noindex">
+    <title>Dashoard</title>
 
     <link rel="canonical" href="https://localhost">
 
     <!-- Bootstrap core CSS -->
-	<link href="/asset/vendor/bootstrap/4.4//css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="/asset/vendor/bootstrap/4.4/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Favicons -->
 	<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -225,11 +228,11 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/asset/vendor/jquery/3.4.1/jquery.slim.min.js"><\/script>')</script>
 <script src="/asset/vendor/bootstrap/4.4/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment-with-locales.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"></script>
 <script src="/asset/vendor/moment/0.5.31/builds/moment-timezone-with-data-2012-2022.min.js"></script>
 <script>
 function displayTime() {
-    var time = moment().tz("America/Argentina/Buenos_Aires").format('HH:mm:ss');
+    let time = moment().tz("<?php echo $TIMEZONE;?>").format('HH:mm:ss');
     $('#clock').html(time);
     setTimeout(displayTime, 1000);
 }
