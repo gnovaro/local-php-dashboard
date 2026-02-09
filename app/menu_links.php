@@ -21,6 +21,8 @@ return [
     [
         'name' => 'Mobile Develop',
         'links' => [
+            ['name' => 'React Native', 'url' => 'https://reactnative.dev/'],
+            ['name' => 'Flet (Python)', 'url' => 'https://flet.dev/'],
             ['name' => 'Amp', 'url' => 'https://amp.dev/'],
             ['name' => 'Amp email', 'url' => 'https://developers.google.com/gmail/ampemail?hl=en'],
             ['name' => 'Mobile HTML5', 'url' => 'http://mobilehtml5.org/'],
@@ -57,7 +59,9 @@ return [
             ['name' => 'excalidraw (Sketching / Diagrams)', 'url' => 'https://excalidraw.com/'],
             ['name' => 'Carbon App (Share code)', 'url' => 'https://carbon.now.sh'],
             ['name' => 'Convertio (File conversor)', 'url' => 'https://convertio.co/es/'],
+                ['name' => '', 'url' => ''],//Divider
             ['name' => 'Maildrop (Disposable Mail)', 'url' => 'https://maildrop.cc'],
+            ['name' => 'Mailinator (Disposable Mail)', 'url' => 'https://www.mailinator.com/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'diagrams.net', 'url' => 'https://app.diagrams.net/'],
             ['name' => 'excalidraw.com', 'url' => 'https://excalidraw.com/'],
@@ -65,7 +69,8 @@ return [
             ['name' => 'removebg', 'url' => 'https://www.remove.bg/'],
                 ['name' => '', 'url' => ''],//Divider
             ['name' => 'Whereby (Video Meetings)', 'url' => 'https://whereby.com'],
-            ['name' => 'Jitsi Meet(Video Meetings)', 'url' => 'https://meet.jit.si']
+            ['name' => 'Jitsi Meet (Video Meetings)', 'url' => 'https://meet.jit.si'],
+            ['name' => 'Zoom (Video Meetings)', 'url' => 'https://www.zoom.com']
         ]
     ],
     'data' =>
