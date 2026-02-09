@@ -132,9 +132,14 @@ return [
         ]
     ],
     'ia' => [
-        'name' => 'IA',
+        'name' => 'AI',
         'links' => [
             ['name' => 'ChatGPT', 'url' => 'https://chat.openai.com'],
+            ['name' => 'Google Gemini', 'url' => 'https://gemini.google.com'],
+            ['name' => 'Claude', 'url' => 'https://claude.ai/'],
+            ['name' => 'Deepseek', 'url' => 'https://www.deepseek.com/en/'],
+            ['name' => 'Kimi', 'url' => 'https://www.kimi.com/'],
+            ['name' => 'Qwen', 'url' => 'https://qwen.ai'],
         ]
     ],
 ];
